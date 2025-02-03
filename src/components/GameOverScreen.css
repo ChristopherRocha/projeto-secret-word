@@ -1,0 +1,58 @@
+@import url("https://fonts.cdnfonts.com/css/the-halloween");
+
+.endgame_component {
+  margin-top: 1%;
+  padding: 20px;
+  text-align: center;
+}
+
+.endgame_component h1 {
+  font-family: "The Halloween", sans-serif;
+  color: red;
+}
+
+.endgame_component button {
+  align-items: center;
+  color: #242424;
+  font-size: 30px;
+  padding: 20px 50px;
+  border-radius: 10px;
+  border: 2px solid #242424;
+  transition: 0.3s;
+  margin-top: 3em;
+}
+
+.endgame_component button:hover {
+  cursor: pointer;
+  background-color: #242424;
+  border: 2px solid white;
+  color: red;
+}
+
+.selectedWord {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    violet,
+    red,
+    yellow,
+    orange
+  );
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

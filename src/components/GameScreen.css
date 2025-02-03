@@ -1,0 +1,147 @@
+.game_component {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  margin-top: 1%;
+  padding: 20px;
+  text-align: center;
+  border: 10px solid transparent;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.wordContainer {
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  border: 5px solid transparent;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 10s rotate linear infinite;
+}
+
+.points {
+  text-decoration: underline;
+  text-decoration-color: rebeccapurple;
+  text-align: center;
+}
+.tip span {
+  text-decoration: underline;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red,
+    yellow,
+    orange
+  );
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.letter,
+.blankSquare {
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: normal;
+  outline: 2px solid white;
+  margin: 5px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+}
+
+.letterContainer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letterContainer input {
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  text-align: center;
+  border-radius: 7px;
+  border: none;
+}
+
+.letterContainer button {
+  font-size: 30px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 2px solid #242424;
+  transition: 0.3s;
+  margin-left: 0.4em;
+}
+
+.letterContainer button:hover {
+  cursor: pointer;
+  background-color: #242424;
+  border: 2px solid white;
+  color: white;
+}
+
+.wrongLettersContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrongLettersContainer p {
+  margin-right: 10px;
+}
+
+.dinamic-letter {
+  text-transform: uppercase;
+}

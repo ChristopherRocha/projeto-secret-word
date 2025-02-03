@@ -1,0 +1,64 @@
+.start_component {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.main_text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.start_component h1 {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 3rem;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red,
+    yellow,
+    orange
+  );
+  background-size: 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rainbow 6s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.start_component button {
+  margin-top: 50%;
+  padding: 20px 50px;
+  border-radius: 20px;
+  border: 2px solid #242424;
+  transition: 0.3s;
+}
+
+.start_component button:hover {
+  cursor: pointer;
+  background-color: #242424;
+  border: 2px solid white;
+  color: white;
+}
